@@ -1,0 +1,26 @@
+\item Sea $W$ el subespacio de $\R^4$ generado por $u=(2,3,1,1)$ y $v=(1,0,-1,2)$. ¿Qué funcionales lineales
+    \begin{center}
+        $f(x_1,x_2,x_3,x_4)=c_1x_1+c_2x_2+c_3x_3+c_4x_4$ (para $c_i\in\R, \forall i=1,2,3,4$)
+    \end{center}
+    pertenecen a $W^\circ$?
+    \begin{mdframed}[style=s]
+        Se sabe que \[W=\{f\in(\R^4)^*:f(w)=0\quad \forall w\in W\}\]
+        \begin{center}
+            $\begin{cases}
+                f(2,3,1,1)=2c_1+3c_2+c_3+c_4=0\\
+                f(1,0,-1,2)=c_1-c_3+c_4
+            \end{cases}\to\begin{cases}
+                c_4=c_2+c_3\\
+                c_1=-2c_2-c_3
+            \end{cases}$\\
+            $\begin{cases}
+                c_2=1,c_3=0\to c_1=-2,c_4=1\to f_1(x_1,x_2,x_3,x_4)=-2x_1+x_2+x_4\\
+                c_2=0,c_3=1\to c_1=-1,c_4=1\to f_2(x_1,x_2,x_3,x_4)=-x_1+x_3+x_4
+            \end{cases}$
+        \end{center}
+        Los funcionales lineales que pertenecen a $W^\circ$ son de la forma 
+        \begin{center}
+            $f(x_1,x_2,x_3,x_4)=\alpha(-2x_1+x_2+x_4)+\beta(-x_1+x_3+x_4)$\\
+            $\to f(x_1,x_2,x_3,x_4)=(-2\alpha-\beta)x_1+\alpha x_2+\beta x_3+ (\alpha+\beta)x_4\quad \alpha,\beta\in\R$
+        \end{center}
+    \end{mdframed}

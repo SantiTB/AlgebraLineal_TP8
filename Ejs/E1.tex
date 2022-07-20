@@ -1,0 +1,80 @@
+\item Hallar la base dual de cada una de las siguientes bases:
+    \begin{enumerate}
+        \item $B=\{(1,0,-1),(1,1,0),(1,0,0)\}$ base de $\R^3$
+            \begin{mdframed}[style=s]
+                Del \textbf{Teorema 6.4} sabemos que la base dual $B^*=\{f_1,f_2,f_3\}$ debe cumplir $f_i(b_j)=\delta_{ij}$, siendo $b_j$ los elementos de la base $B$. Un funcional lineal sobre $\R^3$ es de la forma: $f(x,y,z)=\alpha x+\beta y+\gamma z$. Como voy a necesitar 3 funcionales, tengo que $f_i(x,y,z)=\alpha_ix+\beta_iy+\gamma_iz, i=1,2,3.$
+                \begin{center}
+                    $
+                    \begin{cases}
+                        f_1(1,0,-1)=\alpha_1-\gamma_1=1\\
+                        f_1(1,1,0)=\alpha_1+\gamma_1=0\\
+                        f_1(1,0,0)=\alpha_1=0
+                    \end{cases}
+                    \begin{cases}
+                        f_2(1,0,-1)=\alpha_2-\gamma_2=0\\
+                        f_2(1,1,0)=\alpha_2+\gamma_2=1\\
+                        f_2(1,0,0)=\alpha_2=0
+                    \end{cases}
+                    \begin{cases}
+                        f_3(1,0,-1)=\alpha_3-\gamma_3=0\\
+                        f_3(1,1,0)=\alpha3+\gamma_3=0\\
+                        f_3(1,0,0)=\alpha_3=1
+                    \end{cases}$\\
+                    $\to B^*=\{f_1(x,y,z)=-z;f_2(x,y,z)=y;f_3(x,y,z)=x+y+z\}$
+                \end{center}
+            \end{mdframed}
+        \item $B=\{(-i,0),(1,1-i)\}$ base de $\C^2$
+            \begin{mdframed}[style=s]
+                También se puede proseguir de la siguiente manera. Un elemento $(x,y)\in \C^2$ se escribe
+                \begin{tightcenter}
+                    $(x,y)=\alpha(-i,0)+\beta(1,1-i)\quad\alpha,\beta\in\C$
+                \end{tightcenter}
+                De la ecuación se obtiene que:
+                \begin{tightcenter}
+                    $\beta=y\frac{1+i}{2},\quad\alpha=xi+y\frac{1-i}{2}$\\
+                    por linealidad $\to\begin{cases}
+                        f_1(x,y)=\alpha f_1(-i,0)+\beta f_1(1,1-i)=xi+y\frac{1-i}{2}\cdot 1+y\frac{1+i}{2}\cdot 0=xi+y\frac{1-i}{2}\\
+                        f_2(x,y)=\alpha f_2(-i,0)+\beta f_2(1,1-i)=xi+y\frac{1-i}{2}\cdot 0+y\frac{1+i}{2}\cdot 1=y\frac{1+i}{2}
+                    \end{cases}$\\
+                    $\to B^*=\{f_1(x,y)=xi+y\frac{1-i}{2};f_2(x,y)=y\frac{1+i}{2}\}$
+                \end{tightcenter}
+            \end{mdframed}
+        \item $B=\left\{
+            \begin{pmatrix}
+                1&0\\0&0
+            \end{pmatrix},
+            \begin{pmatrix}
+                0&-1\\1&0
+            \end{pmatrix},
+            \begin{pmatrix}
+                0&0\\-1&0
+            \end{pmatrix},
+            \begin{pmatrix}
+                1&0\\0&1
+            \end{pmatrix}
+        \right\}$ base de $\R^{2\times 2}$
+            \begin{mdframed}[style=s]
+                Dado un $A\in\R^{2\times2},A=
+                \begin{pmatrix}
+                    a&b\\c&d
+                \end{pmatrix}=x_1
+                \begin{pmatrix}
+                    1&0\\0&0
+                \end{pmatrix}+x_2
+                \begin{pmatrix}
+                    0&-1\\1&0
+                \end{pmatrix}+x_3
+                \begin{pmatrix}
+                    0&0\\-1&0
+                \end{pmatrix}+x_4
+                \begin{pmatrix}
+                    1&0\\0&1
+                \end{pmatrix}$\\
+                De donde se llega a $\begin{cases}
+                    x_1=a-d\\
+                    x_2=-b\\
+                    x_3=-b-c\\
+                    x_4=d
+                \end{cases}\to B^*=\{f_1(A)=a-d,f_2(A)=-b,f_3(A)=-b-c,f_4(A)=d\}$
+            \end{mdframed}
+    \end{enumerate}

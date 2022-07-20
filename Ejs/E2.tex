@@ -1,0 +1,50 @@
+\item Consideremos los siguientes vectores de $\R^3$:
+    \begin{center}
+        $v_1=(-1,-1,0); \quad v_2=(0,1,-2);\quad v_3=(1,0,1)$
+    \end{center}
+    \begin{enumerate}
+        \item Probar que forman una base de $\R^3$ y hallar su base dual.
+            \begin{mdframed}[style=s]
+                $\vec{0}=x_1(-1,-1,0)+x_2(0,1,-2)+x_3(1,0,1)\to \begin{cases}
+                    -x_1+x_3=0\\
+                    -x_1+x_2=0\\
+                    -2x_2+x_3=0
+                \end{cases}\to\begin{cases}
+                    x_1=x_3\\
+                    x_1=x_2\\
+                    2x_2=x_3
+                \end{cases}\to x_1,x_2,x_3=0\to$ son li.\\
+                Como $v_1,v_2,v_3$ son vectores li de $\R^3$, estos forman una base de $\R^3$\\
+                Sea $v=(x,y,z)\in\R^3,(x,y,z)=\alpha(-1,-1,0)+\beta(0,1,-2)+\gamma(1,0,1)\to\begin{cases}
+                    \alpha=x-2y-z\\
+                    \beta=x-y-z\\
+                    \gamma=2x-2y-z
+                \end{cases}$\\
+                $\begin{cases}
+                    f_1(x,y,z)=\alpha f_1(-1,-1,0)+\beta f_1(0,1,-2)+\gamma f_1(1,0,1)=x-2y-z\\
+                    f_2(x,y,z)=\alpha f_2(-1,-1,0)+\beta f_2(0,1,-2)+\gamma f_2(1,0,1)=x-y-z\\
+                    f_3(x,y,z)=\alpha f_3(-1,-1,0)+\beta f_3(0,1,-2)+\gamma f_3(1,0,1)=2x-2y-z
+                \end{cases}\to B^*=\{f_1,f_2,f_3\}$
+            \end{mdframed}
+        \item Supongamos que $f:\R^3\to\R$ es un funcional lineal tal que
+            \begin{center}
+                $f(v_1)=1;\quad f(v_2)=-f(v_1);\quad f(v_3)=3$
+            \end{center}
+            Hallar explícitamente a $f(x,y,z)$ para todo $(x,y,z)\in\R^3$.¿Cuánto vale $f(3,4,0)$?
+            \begin{mdframed}[style=s]
+                La \textbf{Ecuación 6.3} nos dice que 
+                \begin{center}
+                    $f=\sum_{i=1}^n f(b_i)f_i$\\
+                    $\to f(x,y,z)=x-2y-z+(-1)(x-y-z)+3(2x-2y-z)$\\
+                    $\to f(x,y,z)=6x-7y-3z$\\
+                    $\to f(3,4,0)=-10$
+                \end{center}
+            \end{mdframed}
+        \item Hallar un funcional lineal $g:\R^3\to\R$ tal que
+            \begin{center}
+                $g(v_1)=g(v_2)=0;\quad g(v_3)\neq 0$
+            \end{center}
+            \begin{mdframed}[style=s]
+                Propongo $g(v_3)=1\to g(x,y,z)=0(x-2y-z)+0(x-y-z)+2x-2y-z\to g(x,y,z)=2x-2y-z$
+            \end{mdframed}
+    \end{enumerate}

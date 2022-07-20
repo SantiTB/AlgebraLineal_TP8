@@ -1,0 +1,84 @@
+\item Sea $V$ un $\K$-EV de dimensión finita. Probar que:
+    \begin{enumerate}
+        \item Si $A$ y $B$ son subconjuntos de $V$ tales que $A\subseteq B$ entonces $B^\circ \subseteq A^\circ$
+            \begin{mdframed}[style=s]
+                Si $A=B\to B^\circ =A^\circ$. Si $A\subset B$ tenemos que 
+                \begin{tightcenter}
+                    $B^\circ=\{f\in V^*/f(b)=0\quad\forall b\in B\}$\\
+                    $A^\circ=\{g\in V^*/f(a)=0\quad\forall a\in A\}$    
+                \end{tightcenter}
+                Dado un $a\in A$, como $A\subset B\to a\in B\to f(a)=0$. Dado un $f\in B^\circ, f(v)=0\quad\forall v\in B$, como $A\subset B$, $f(w)=0\quad\forall w\in A\to f\in A^\circ\to B^\circ \subset A^\circ$. Del resultado de la igualdad y la inclusión, se obtiene que
+                \begin{tightcenter}
+                    $B^\circ \subseteq A^\circ$
+                \end{tightcenter}
+            \end{mdframed}
+        \item Si $S$ y $T$ son subespacios de $V$ entonces,
+            \begin{enumerate}
+                \item $(S+T)^\circ =S^\circ\cap T^\circ$
+                    \begin{mdframed}[style=s]
+                        \begin{tightcenter}
+                            $(S+T)^\circ=\{f\in V^*/f(s+t)=0\quad\forall s\in S, t\in T\}$\\
+                            $S^\circ\cap T^\circ=\{g\in V^*/g(s)=0\quad\forall s\in S\quad\land\quad g(t)=0\quad\forall t\in T\}$
+                        \end{tightcenter}
+                        \begin{itemize}
+                            \item[($\subset$)]\hfill\\
+                                Sea $f\in(S+T)^\circ,s\in S$ y $t\in T$
+                                \begin{align*}
+                                    f(s)&=f(s+0)&&\text{Elemento neutro}\\
+                                    &=0&&\text{$s\in S, 0\in T$ por ser subespacio $\to s+0\in S+T$}
+                                \end{align*}
+                                De manera similar
+                                \begin{align*}
+                                    f(t)&=f(0+t)&&\text{Elemento neutro}\\
+                                    &=0&&\text{$t\in T, 0\in S$ por ser subespacio $\to 0+t\in S+T$}
+                                \end{align*}
+                                Con lo cual, $f(s)=f(t)=0\quad\forall s\in S,t\in T$. Por lo tanto $(S+T)^\circ\subset S^\circ\cap T^\circ$
+                            \item[($\supset$)]\hfill\\
+                                Sea $g\in S^\circ\cap T^\circ, s\in S$ y $t\in T$, tengo que $g(s)=g(t)=0$. Entonces $g(s+t)=g(s)+g(t)=0+0=0\to g\in(S+T)^\circ\to (S+T)^\circ\supset S^\circ\cap T^\circ$
+                        \end{itemize}
+                        De los dos análisis, se concluye que $(S+T)^\circ = S^\circ\cap T^\circ$
+                    \end{mdframed}
+                \item $(S\cap T)^\circ=S^\circ + T^\circ$
+                    \begin{mdframed}[style=s]
+                        \begin{tightcenter}
+                            $(S\cap T)^\circ=\{f\in V^*:f(v)=0\quad\forall v\in(S\cap T)\}$\\
+                            $S^\circ +T^\circ=\{g\in V^*:g(v)=h(v)+k(v),h\in S^\circ,k\in T^\circ\}$
+                        \end{tightcenter}
+                        Sea $f\in S^\circ +T^\circ\to f=h+k,h\in S^\circ,k\in T^\circ\to f(v)=(h+k)(v)=h(v)+k(v)=0\quad\forall v\in S\cap T\to\\f\in (S\cap T)^\circ\to (S\cap T)^\circ\supset S^\circ +T^\circ$(1)\\
+                        En vez de probar la inclusión hacia el otro lado, (lo cual no me estaría saliendo), voy a tratar de ver que las dimensiones coinciden:\\
+                        dim$V=n$, dim$S=m_1$, dim$T=m_2\to$ dim$S^\circ=n-m_1$, dim$T^\circ=n-m_2$.\\
+                        Tenemos que 
+                        \begin{tightcenter}
+                            dim$(S^\circ +T^\circ)=$ dim$S^\circ+$ dim$T^\circ-$ dim$(S^\circ \cap T^\circ)=2n-m_1-m_2-dim(S^\circ \cap T^\circ)$
+                        \end{tightcenter}
+                        Por otra parte
+                        \begin{tightcenter}
+                            dim$(S\cap T)^\circ=$ dim$V-$ dim$(S\cap T)=n-$ dim$(S\cap T)=n+$ dim$(S+T)-m_1-m_2$\\$=2n-m_1-m_2-$ dim$(S+T)^\circ$
+                        \end{tightcenter}
+                        Como se demostró en el inciso anterior, $(S+T)^\circ = S^\circ\cap T^\circ\to$ dim $(S+T)^\circ=$ dim$(S^\circ\cap T^\circ)$, con lo cual dim$(S^\circ +T^\circ)=$ dim$(S\cap T)^\circ$(2). De (1) y (2) se concluye que
+                        \begin{tightcenter}
+                            $S^\circ +T^\circ=(S\cap T)^\circ$
+                        \end{tightcenter}
+                    \end{mdframed}
+            \end{enumerate}
+        \item Sean $S=\{(x_1,x_2,x_3,x_4):x_1-x_3=0\land x_1+x_2+x_4=0\}$ y $T=\overline{\{(2,1,3,1)\}}$ subespacios de $\R^4$. Hallar una base para $(S+T)^\circ$ y una base para $(S\cap T)^\circ$
+            \begin{mdframed}[style=s]
+                Un $s\in S$ cumple $s=(x_3,-x_3-x_4,x_3,x_4)=x_3(1,-1,1,0)+x_4(0,-1,0,1)$
+                \[\to S=\overline{\{(1,-1,1,0),(0,-1,0,1)\}}\]
+                Por lo tanto un $v\in S+T$ se escribe $v=a(1,-1,1,0)+b(0,-1,0,1)+c(2,1,3,1)$\\
+                $\begin{cases}
+                    f(1,-1,1,0)=a-b+c=0\\
+                    f(0,-1,0,1)=-b+d=0\\
+                    f(2,1,3,1)=2a+b+3c+d
+                \end{cases}\to\begin{cases}
+                    a=5d\\
+                    b=d\\
+                    c=-4d
+                \end{cases}$\\
+                Eligiendo $d=1$, tenemos que $a=5,b=1,c=-4\to f(x_1,x_2,x_3,x_4)=5x_1+x_2-4x_3+x_4\to B=\{f\}$
+                $S\cap T=\{\vec{0}\}\to (S\cap T)^\circ=(\R^4)^*\to$ una base del anulador es
+                \begin{tightcenter}
+                    $B_1=\{f_1(x_1,x_2,x_3,x_4)=x_1,f_2(x_1,x_2,x_3,x_4)=x_2,f_3(x_1,x_2,x_3,x_4)=x_3,f_4(x_1,x_2,x_3,x_4)=x_4\}$
+                \end{tightcenter}
+            \end{mdframed}
+    \end{enumerate}

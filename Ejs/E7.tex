@@ -1,0 +1,51 @@
+\item Hallar $S^\circ$ para cada uno de los siguientes casos:
+    \begin{enumerate}
+        \item $S=\overline{\{(1,1,0,0,0);(2,-1,1,2,0)\}}\subset \R^5$
+            \begin{mdframed}[style=s]
+                $f(x_1,x_2,x_3,x_4,x_5)=\alpha_1x_1+\alpha_2x_2+\alpha_3x_3+\alpha_4x_4+\alpha_5x_5\quad \alpha_i\in\R$. Como $f\in S^\circ$
+                \begin{center}
+                    $\to\begin{cases}
+                        f(1,1,0,0,0)=\alpha_1+\alpha_2=0\\
+                        f(2,-1,1,2,0)=2\alpha_1-\alpha_2+\alpha_3+2\alpha_4=0
+                    \end{cases}\to\begin{cases}
+                        \alpha_1=-\alpha_2\\
+                        \alpha_3=3\alpha_2-2\alpha_4
+                    \end{cases}$
+                \end{center}
+                Tengo 3 variables independientes: $\alpha_2,\alpha_4$ y $\alpha_5$\\\pagebreak
+                \begin{center}
+                    $\begin{cases}
+                        \alpha_2=1,\alpha_4=\alpha_5=0\to\alpha_1=-1,\alpha_3=3\to f_1(x_1,x_2,x_3,x_4,x_5)=-x_1+x_2+3x_3\\
+                        \alpha_4=1,\alpha_2=\alpha_5=0\to\alpha_1=0,\alpha_3=-2\to f_2(x_1,x_2,x_3,x_4,x_5)=-2x_3+x_4\\
+                        \alpha_5=1,\alpha_2=\alpha_4=0\to\alpha_1=0,\alpha_3=0\to f_3(x_1,x_2,x_3,x_4,x_5)=x_5
+                    \end{cases}$
+                    $\to S^\circ=\overline{\{f_1,f_2,f_3\}}$
+                \end{center}
+            \end{mdframed}
+        \item $S=\overline{\{(x,y,z):x+y+2z=0\land x-3z=0\}}\subset \R^3$
+            \begin{mdframed}[style=s]
+                Sea $s\in S\to s=(x,y,z)=(3z,-5z,z)=z(3,-5,1)\to S=\overline{\{(3,-5,1)\}}$, entonces los funcionales lineales que anulen a $S$ cumplen: $f(3,-5,1)=0$. Sea $f(x,y,z)=\alpha x+\beta y+\gamma z\to f(3,-5,1)=3\alpha-5\beta+\gamma$. Tomando a $\alpha$ y $\beta$ como independientes
+                \[\begin{cases}
+                    \alpha=1,\beta=0\to\gamma=-3\to f_1(x,y,z)=x-3z\\
+                    \alpha=0,\beta=1\to\gamma=-5\to f_2(x,y,z)=y+5z
+                \end{cases}\]\[\to S^\circ=\overline{\{f_1,f_2\}}\]
+            \end{mdframed}
+        \item $S=\overline{\{1+x+x^2,2+x^3+2x^4,x^3}\}\subset \R_4[x]$
+            \begin{mdframed}[style=s]
+                Un funcional lineal de $(R_4[x])^*$ es de la forma \[f(a+bx+cx^2+dx^3+ex^4)=\alpha a+\beta b+\gamma c+\delta d+\epsilon e\] Un $f\in S^\circ$ cumple
+                \[\begin{cases}
+                    f(1+x+x^2)=\alpha+\beta+\gamma=0\\
+                    f(2+x^3+2x^4)=2\alpha+\delta+2\epsilon=0\\
+                    f(x^3)=\delta=0
+                \end{cases}\to\begin{cases}
+                    \alpha=-\beta-\gamma\\
+                    \epsilon=\beta+\gamma\\
+                    \delta=0
+                \end{cases}\]
+                Tengo dos variables independientes: $\beta,\gamma$
+                \[\begin{cases}
+                    \beta=1,\gamma=0\to\alpha=-1,\epsilon=1,\delta=0\to f_1(a+bx+cx^2+dx^3+ex^4)=-a+b+e\\
+                    \beta=0,\gamma=1\to\alpha=-1,\epsilon=1,\delta=0\to f_2(a+bx+cx^2+dx^3+ex^4)=-a+c+e
+                \end{cases}\]\[\to S^\circ=\overline{\{f_1,f_2\}}\]
+            \end{mdframed}
+    \end{enumerate}

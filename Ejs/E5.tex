@@ -1,0 +1,32 @@
+\item Sea $V$ un $\K$-EV de dimensión finita y sean $f$ y $g$ funcionales lineales sobre $V$, tales que $h(x)=f(x)g(x)$ es un funcional lineal sobre $V$. Probar que, o bien $f=0$, o bien $g=0$
+    \begin{mdframed}[style=s]
+        \textbf{Sugerencia:} Evaluar $h$ en $c\cdot x$ para $c\in\K$\\
+        Como $f$ y $g$ son funcionales lineales sobre $V$,
+        \begin{tightcenter}
+            $f:V\to\K\quad g:V\to\K$
+        \end{tightcenter}
+        Además, se tiene que $h(x)=f(x)g(x)$ es un funcional lineal sobre $V$
+        \begin{tightcenter}
+            $h:V\to\K$
+        \end{tightcenter}
+        Para que $h$ sea un funcional lineal debe cumplir linealidad
+        \begin{tightcenter}
+            $h(cx)=ch(x)\quad c\in\K$
+        \end{tightcenter}
+        \begin{align*}
+            h(cx)&=f(cx)g(cx)&&\text{Definición}\\
+            &=cf(x)cg(x)&&\text{Linealidad}\\
+            &=c^2f(x)g(x)&&\text{Conmutatividad}\\
+            &=c^2h(x)&&\text{Definición}
+        \end{align*}
+        Llego a tener la siguiente igualdad: $c^2h(x)=ch(x)$, entonces $f(x)=0\lor g(x)=0$. Faltaría comprobar si la linealidad en la suma me impone alguna otra restricción. Sean $v,w\in V$
+        \begin{tightcenter}
+            $h(v+w)=f(v+w)g(v+w)$
+        \end{tightcenter}
+        Debido a las condiciones previas, se tienen dos posibles caminos:
+        \begin{itemize}
+            \item $f(x)=0 \to h(v+w)=0\cdot (g(v)+g(w))=0g(v)+0g(w)=f(v)g(v)+f(w)g(w)=h(v)+h(w)$
+            \item $g(x)=0 \to h(v+w)=(h(v)+h(w))\cdot0 =f(v)0+f(w)0=f(v)g(v)+f(w)g(w)=h(v)+h(w)$
+        \end{itemize}
+        Se ve que si $f=0\lor g=0, h$ es un funcional lineal sobre $V$
+    \end{mdframed}

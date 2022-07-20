@@ -1,0 +1,41 @@
+\item Consideremos $\C_2[x]$ como el $\C$-EV de los polinomios de grado menor o igual a 2.
+    \begin{enumerate}
+        \item Probar que $B*=\{f_1,f_2,f_3\}$ es una base del dual de $\C_2[x]$, donde
+            \begin{center}
+                $f_k(p)=p(k-1)$\quad para $p\in\C_2[x]$
+            \end{center}
+            \begin{mdframed}[style=s]
+                Un $p\in\C_2[x]$ se escribe como $p(x)=ax^2+bx+c\quad a,b,c\in\C$\\
+                $\begin{cases}
+                    f_1(p)=p(0)=c\\
+                    f_2(p)=p(1)=a+b+c\\
+                    f_3(p)=p(2)=4a+2b+c
+                \end{cases}$\\
+                Para que sean una base del dual tienen que pertenecer al dual (lo cual es cierto ya que $f_i:\C_2[x]\to\C, i=1,2,3$) y deben ser li.\\
+                $0=\alpha f_1+\beta f_2+\gamma f_3=\alpha c+ \beta(a+b+c)+\gamma(4a+2b+c)\to \begin{cases}
+                    (\alpha+\beta+\gamma)c=0\\
+                    (\beta+2\gamma)b=0\\
+                    (\beta+4\gamma)a=0
+                \end{cases}\to\alpha=\beta=\gamma=0\to$ son li.
+            \end{mdframed}
+        \item Hallar una base de $C_2[x]$, tal que $B*$ sea su base dual.
+            \begin{mdframed}[style=s]
+                $B=\{b_1,b_2,b_3\}\quad b_i=r_ix^2+s_ix+t_i$\\
+                $\begin{cases}
+                    f_1(b_1)=b_1(0)=1\to t_1=1\\
+                    f_2(b_1)=b_1(1)=0\to r_1+s_1+1=0\\
+                    f_3(b_1)=b_1(2)=0\to 4r_1+2s_1+1=0\\
+                    f_1(b_2)=b_2(0)=0\to t_2=0\\
+                    f_2(b_2)=b_2(1)=1\to r_2+s_2=1\\
+                    f_3(b_2)=b_2(2)=0\to 4r_2+2s_2=0\\
+                    f_1(b_3)=b_3(0)=0\to t_3=0\\
+                    f_2(b_3)=b_3(1)=0\to r_3+s_3=0\\
+                    f_3(b_3)=b_3(2)=1\to 4r_3+2s_3=0
+                \end{cases}\to\begin{cases}
+                    b_1(x)=\frac{1}{2}x^2-\frac{3}{2}x+1\\
+                    b_2(x)=-x^2+2x\\
+                    b_3(x)=\frac{1}{2}x^2-\frac{1}{2}x
+                \end{cases}
+                $
+            \end{mdframed}
+    \end{enumerate}
